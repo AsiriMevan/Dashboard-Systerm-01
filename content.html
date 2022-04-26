@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Admin Dashboard | Redesign</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script type="text/javascript" src="scriptdash.js">  </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   
+    <script>
+        (function () {
+            setInterval(function () {
+                loadData2();
+            }, 60000)
+        }
+        )();
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="bonfire-outline"></ion-icon>
+                        </span>
+                        <span class="title">Brand Name</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="home-outline"></ion-icon>
+                        </span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="navigate-circle-outline"></ion-icon>
+                        </span>
+                        <span class="title">GeoFence</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="person-outline"></ion-icon>
+                        </span>
+                        <span class="title">Customers</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="notification.html">
+                        <span class="icon">
+                            <ion-icon name="notifications-outline"></ion-icon>
+                        </span>
+                        <span class="title">Notification</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="help-circle-outline"></ion-icon>
+                        </span>
+                        <span class="title">Help</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="settings-outline"></ion-icon>
+                        </span>
+                        <span class="title">Settings</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="code-working-outline"></ion-icon>
+                        </span>
+                        <span class="title">Password</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon">
+                            <ion-icon name="log-out-outline"></ion-icon>
+                        </span>
+                        <span class="title">Sign Out</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- main s -->
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+                <!-- search s -->
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Search here">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </label>
+                </div>
+                <!-- search e -->
+
+                <!-- userImg s -->
+                <div class="user">
+                    <img src="Img/user.jpg" alt="">
+                </div>
+                <!-- userImg e -->
+            </div>
+
+            <!-- card s -->
+            <div class="cardBox">
+                <div class="card">
+                    <div>
+                        <div class="numbers">1,504</div>
+                        <div class="cardname">Daily Views</div>
+                    </div>
+                    <div class="iconBx">
+                        <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <div class="numbers">80</div>
+                        <div class="cardname">Sales</div>
+                    </div>
+                    <div class="iconBx">
+                        <ion-icon name="cart-outline"></ion-icon>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <div class="numbers">255</div>
+                        <div class="cardname">Comments</div>
+                    </div>
+                    <div class="iconBx">
+                        <ion-icon name="chatbubbles-outline"></ion-icon>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <div class="numbers">$7500</div>
+                        <div class="cardname">Earing</div>
+                    </div>
+                    <div class="iconBx">
+                        <ion-icon name="cash-outline"></ion-icon>
+                    </div>
+                </div>
+            </div>
+            <!-- card e -->
+
+            <div class="details">
+                <!-- details List s -->
+                <div class="recentOrders">
+                    <div class="cardHeader">
+                        <h2>Tracking Details</h2>
+                        <a href="notification.html" class="btn">View All</a>
+
+                    </div>
+                    <div class="trackDetailDash" id="TrackDetailsDash"></div>
+                    <!-- <table>
+                        <thead>
+                            <tr>
+                                <td>Name</td>
+                                <td>Price</td>
+                                <td>Payment</td>
+                                <td>Status</td>
+                               
+                            </tr>
+                        </thead>
+                        <tbody>
+                           
+                             <tr>
+                                <td>Star Refrigerator</td>
+                                <td>$1200</td>
+                                <td>Paid</td>
+                                <td><span class="status delivered">Delivered</span></td>
+                            </tr> 
+                             <tr>
+                                <td>Window Coolers</td>
+                                <td>$110</td>
+                                <td>Due</td>
+                                <td><span class="status pending">Pending</span></td>
+                            </tr>
+                            <tr>
+                                <td>Speaker</td>
+                                <td>$620</td>
+                                <td>Paid</td>
+                                <td><span class="status return">Return</span></td>
+                            </tr>
+                            <tr>
+                                <td>HP Laptops</td>
+                                <td>$110</td>
+                                <td>Due</td>
+                                <td><span class="status inprogress">In Progress</span></td>
+                            </tr>
+                            <tr>
+                                <td>Apple Watch</td>
+                                <td>$1200</td>
+                                <td>Paid</td>
+                                <td><span class="status delivered">Delivered</span></td>
+                            </tr>
+                            <tr>
+                                <td>Wall Fan</td>
+                                <td>$110</td>
+                                <td>Paid</td>
+                                <td><span class="status pending">Pending</span></td>
+                            </tr>
+                            <tr>
+                                <td>Adidas Shoes</td>
+                                <td>$620</td>
+                                <td>Paid</td>
+                                <td><span class="status return">Return</span></td>
+                            </tr>
+                            <tr>
+                                <td>Denim Shirts</td>
+                                <td>$110</td>
+                                <td>Due</td>
+                                <td><span class="status inprogress">In Progress</span></td>
+                            </tr>
+                            <tr>
+                                <td>Casual Shoes</td>
+                                <td>$575</td>
+                                <td>Paid</td>
+                                <td><span class="status pending">Pending</span></td>
+                            </tr>
+                            <tr>
+                                <td>Wall Fan</td>
+                                <td>$110</td>
+                                <td>Paid</td>
+                                <td><span class="status pending">Pending</span></td>
+                            </tr>
+                            <tr>
+                                <td>Denim Shirts</td>
+                                <td>$110</td>
+                                <td>Due</td>
+                                <td><span class="status inprogress">In Progress</span></td>
+                            </tr> 
+                            
+                    </table> -->
+                </div>
+                <!-- details List e -->
+
+                <!-- New Customer s-->
+                <div class="recentCustomers">
+                    <div class="cardHeader">
+                        <h2>Recent Customers</h2>
+                    </div>
+                    <table>
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="Img/img1.jpg"></div>
+                            </td>
+                            <td>
+                                <h4>Mevan<br><span>Western Province</span></h4>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="Img/img2.jpg"></div>
+                            </td>
+                            <td>
+                                <h4>Adithya<br><span>Central Province</span></h4>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="Img/img3.jpg"></div>
+                            </td>
+                            <td>
+                                <h4>Anna<br><span>Eastern Province </span></h4>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="Img/img4.jpg"></div>
+                            </td>
+                            <td>
+                                <h4>Kattey<br><span>Northern Province</span></h4>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="Img/img5.jpg"></div>
+                            </td>
+                            <td>
+                                <h4>Kumara<br><span>Southern Province</span></h4>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="Img/img6.jpg"></div>
+                            </td>
+                            <td>
+                                <h4>Dasun<br><span>North Western Province</span></h4>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="Img/img7.jpg"></div>
+                            </td>
+                            <td>
+                                <h4>Chathuni<br><span>North Central Province </span></h4>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="Img/img8.jpg"></div>
+                            </td>
+                            <td>
+                                <h4>Dinelka<br><span>Uva Province</span></h4>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="60px">
+                                <div class="imgBx"><img src="Img/img10.jpg"></div>
+                            </td>
+                            <td>
+                                <h4>Gamini<br><span>Sabaragamuwa Province</span></h4>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <!-- New Customer e-->
+
+            </div>
+
+
+        </div>
+        <!-- main e -->
+
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <script>
+        //MenuToggle
+        let toggle = document.querySelector('.toggle');
+        let navigation = document.querySelector('.navigation');
+        let main = document.querySelector('.main');
+
+        toggle.onclick = function () {
+            navigation.classList.toggle('active');
+            main.classList.toggle('active');
+        }
+
+
+        //add hovered class in selected list item
+        let list = document.querySelectorAll('.navigation li');
+        function activeLink() {
+            list.forEach((item) =>
+                item.classList.remove('hovered'));
+            this.classList.add('hovered');
+        }
+        list.forEach((item) =>
+            item.addEventListener('mouseover', activeLink));
+    </script>
+</body>
+
+</html>

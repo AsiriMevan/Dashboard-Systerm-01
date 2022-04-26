@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mapstyle.css">
+
+    <!--Map js-->
+    <script src="https://js.api.here.com/v3/3.1/mapsjs-core.js"
+        type="text/javascript" charset="utf-8"></script>
+      <script src="https://js.api.here.com/v3/3.1/mapsjs-core-legacy.js"
+        type="text/javascript" charset="utf-8"></script>
+      <script src="https://js.api.here.com/v3/3.1/mapsjs-service.js"
+        type="text/javascript" charset="utf-8"></script>
+      <script src="https://js.api.here.com/v3/3.1/mapsjs-service-legacy.js"
+        type="text/javascript" charset="utf-8"></script>
+    <title>Geofencing</title>
+</head>
+<body>
+    <div class="map"></div>
+    <script>
+    const platform = new H.service.Platform({
+        'apikey': '{YOUR_APIKEY}'
+      });
+      
+      const map = new H.Map(
+          document.getElementById("map"),
+          platform.createDefaultLayers().normal.map,
+          {
+              zoom: 10,
+              center:{lat:37:lan:121}
+          }
+      )
+//       const maptypes = platform.createDefaultLayers();
+
+//  // Instantiate and display a map
+//  const map = new H.Map(document.getElementById('mapdiv'), maptypes.vector.normal.map, {
+//    center: {lat: 0, lng: 51},
+//    zoom: 8
+//  });
+</script>
+
+</body>
+</html>
